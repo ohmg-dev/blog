@@ -63,8 +63,18 @@ main {
 	width: 720px;
 	max-width: calc(100% - 2em);
 	margin: auto;
-	padding: 3em 1em;
+	padding: 45px 1em 1em 1em;
     background: var(--secondary-background-color);
+	margin-right: auto;
+	margin-left: auto;
+	box-shadow: gray 0px 0px 5px;
+	min-height:calc(100vh - 105px);
+}
+main.homepage {
+    background:
+      linear-gradient(0deg, rgba(255 255 255 / 60%), rgba(255 255 255 / 60%)),
+      url(../assets/old-basin-canal-tall-50qual-crop.jpg);
+    background-size: 100%;
 }
 h1,
 h2,
@@ -170,3 +180,11 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+main > section.homepage-section {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 1em 0;
+  }

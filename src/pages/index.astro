@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BlogFilter from '../components/BlogFilter.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
@@ -10,6 +11,13 @@ import { Image } from 'astro:assets';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+const published_posts = posts.filter((post) => post.data.published)
+
+const {tag} = Astro.props
+
+const tags = published_posts.map((p) => p.data.category).flat(); //Gets all tags from collection
+const uniqueTags = [...new Set(tags)];
 ---
 
 <!doctype html>
@@ -35,17 +43,17 @@ const posts = (await getCollection('blog')).sort(
 				text-decoration: none;
 				transition: 0.2s ease;
 			}
-			ul li:first-child {
+			/* ul li:first-child {
 				width: 100%;
 				margin-bottom: 1rem;
 				text-align: center;
-			}
-			ul li:first-child img {
+			} */
+			/* ul li:first-child img {
 				width: 100%;
 			}
 			ul li:first-child .title {
 				font-size: 2.369rem;
-			}
+			} */
 			ul li img {
 				margin-bottom: 0.5rem;
 				border-radius: 12px;
@@ -60,7 +68,7 @@ const posts = (await getCollection('blog')).sort(
 			}
 			.date {
 				margin: 0;
-				color: rgb(var(--gray));
+				color: #333333
 			}
 			ul li a:hover h4,
 			ul li a:hover .date {
@@ -86,22 +94,51 @@ const posts = (await getCollection('blog')).sort(
 			}
 		</style>
 	</head>
-	<body>
+	<body class="has-navbar-fixed-top">
 		<Header />
-		<main>
+		<main class="homepage">
+            <section class="hero homepage-section">
+                <div class="hero-body">
+                    <p class="title">OldInsuranceMaps.net Blog</p>
+                    <p class="subtitle" style="color:#333333">This blog is a compilation of updates, presentations, writings, and
+                        tech notes about the project since it started in 2020.
+                        For direct updates, you can also <a href="https://oldinsurancemaps.net/newsletter/lahmg-news/subscribe/" title="Subscribe to the newsletter">subscribe to the newsletter</a>,
+                        or read past newsletters at <a href="https://oldinsurancemaps.net/news/" title="View newsletter archives">oldinsurancemaps.net/news</a>.</em>
+                    </p>
+                </div>
+            </section>
+            <section class="homepage-section">
+                <div class="level">
+                    <div class="level-left">
+                        <!-- <div class="level-item">
+                            Filter posts:
+                        </div> -->
+                        <div class="level-item" style="display:flex; justify-content:space-around;" id="tags" data-tags={uniqueTags}>
+                                {uniqueTags.map((tag) => <BlogFilter {tag} />)}
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <button id="clearFilter" style="display:none;"><i class="ph-bold ph-x"></i></button>
+                    </div>
+                </div>
+            </section>
 			<section>
 				<ul>
 					{
-						posts.map((post) => (
-							<li>
+						published_posts.map((post) => (
+							<li class={`post-card ${post.data.category}`}>
 								<a href={`/post/${post.id}/`}>
 									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
+										<Image width={720} height={160} src={post.data.heroImage} alt="" />
 									)}
 									<h4 class="title">{post.data.title}</h4>
+                                    <div class="level">
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />
 									</p>
+                                        <span>{post.data.category}</span>
+
+                                    </div>
 								</a>
 							</li>
 						))
@@ -112,3 +149,59 @@ const posts = (await getCollection('blog')).sort(
 		<Footer />
 	</body>
 </html>
+<script is:inline>
+    function showAll(evt) {
+        let elementsToShow = document.getElementsByClassName("post-card");
+        for (let i = 0; i < elementsToShow.length; i++) {
+            elementsToShow[i].style.display = "block";
+        }
+        document.getElementById("clearFilter").style.display = "none";
+        resetFilterTagStyles()
+    }
+
+  const inputClear = document.getElementById("clearFilter");
+  inputClear.addEventListener("click", showAll);
+
+  function resetFilterTagStyles() {
+    const inputs = document.querySelectorAll("#blogFilter");
+    inputs.forEach((e) => {
+        e.classList.remove("is-dark")
+        e.classList.add("is-light")
+    });
+}
+
+  function hideBlogs(evt) {
+    resetFilterTagStyles()
+
+    evt.currentTarget.classList.remove("is-light")
+    evt.currentTarget.classList.add("is-dark")
+    let selectedTag = evt.currentTarget.getAttribute("data-type");
+    let tagElement = document.getElementById("tags");
+    let tags = tagElement.dataset.tags;
+    tags = tags.split(",");
+    tags.splice(tags.indexOf(selectedTag), 1);
+
+    tags.forEach((t) => {
+      const elementsToHide = document.getElementsByClassName(t);
+      for (let i = 0; i < elementsToHide.length; i++) {
+        elementsToHide[i].style.display = "none";
+      }
+    });
+
+    let elementsToShow = document.getElementsByClassName(selectedTag);
+    for (let i = 0; i < elementsToShow.length; i++) {
+      elementsToShow[i].style.display = "block";
+    }
+    document.getElementById("clearFilter").style.display = "block";
+  }
+
+  // Event listener for the button click
+  const input = document.querySelectorAll("#blogFilter");
+  input.forEach((e) => {
+        e.addEventListener("click", hideBlogs);
+        e.addEventListener("click", () => {
+    });
+  });
+
+  
+</script>

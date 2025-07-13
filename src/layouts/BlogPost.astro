@@ -8,18 +8,14 @@ import { Image } from 'astro:assets';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, heroLink, heroLinkTitle } = Astro.props;
+
 ---
 
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
 			.hero-image {
 				width: 100%;
 			}
@@ -60,7 +56,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<main>
 			<article>
 				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+                    {
+                        heroImage && heroLink ?
+                            <a href={heroLink} title={heroLinkTitle} target="_blank">
+                                <Image width={1020} height={510} src={heroImage} alt=""/>
+                            </a>
+                            : heroImage ?  <Image width={1020} height={510} src={heroImage} alt="" /> : ""
+                    }
 				</div>
 				<div class="prose">
 					<div class="title">

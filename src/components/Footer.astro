@@ -2,33 +2,66 @@
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} Your name here. All rights reserved.
+<footer style="background-color:var(--theme-primary-color);">
+	Blog content &copy; {today.getFullYear()} Adam Cox. All rights reserved.
 	<div class="social-links">
-		<a href="https://m.webtoo.ls/@astro" target="_blank">
-			<span class="sr-only">Follow Astro on Mastodon</span>
-			<svg
-				viewBox="0 0 16 16"
-				aria-hidden="true"
-				width="32"
-				height="32"
-				astro-icon="social/mastodon"
-				><path
-					fill="currentColor"
-					d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"
-				></path></svg
-			>
+        <a href="https://bsky.app/profile/oldinsurancemaps.net" target="_blank">
+			<span class="sr-only">Follow OldInsuranceMaps.net on Bluesky</span>
+            <svg
+            width="9.615983mm"
+            height="8.4666653mm"
+            viewBox="0 0 9.615983 8.4666653"
+            version="1.1"
+            id="svg1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"><sodipodi:namedview
+                id="namedview1"
+                pagecolor="#ffffff"
+                bordercolor="#000000"
+                borderopacity="0.25"
+                inkscape:showpageshadow="2"
+                inkscape:pageopacity="0.0"
+                inkscape:pagecheckerboard="0"
+                inkscape:deskcolor="#d1d1d1"
+                inkscape:document-units="mm"><inkscape:page
+                x="-4.4822163e-22"
+                y="0"
+                width="9.615983"
+                height="8.4666653"
+                id="page2"
+                margin="0"
+                bleed="0" /></sodipodi:namedview>
+                <defs
+                id="defs1" />
+                <g
+                id="layer1"
+                transform="translate(-73.866034,37.935332)">
+                <path
+                d="m 75.950427,-37.365424 c 1.102448,0.827648 2.288258,2.505777 2.723628,3.406358 0.435402,-0.900515 1.621144,-2.578727 2.723627,-3.406358 0.795471,-0.597199 2.084337,-1.059278 2.084337,0.41108 0,0.29365 -0.168364,2.466816 -0.267108,2.819621 -0.34324,1.226594 -1.59399,1.539444 -2.706552,1.350093 1.944738,0.330987 2.439462,1.427335 1.371048,2.523682 -2.029126,2.082181 -2.916443,-0.522426 -3.143911,-1.189821 -0.04168,-0.122349 -0.06118,-0.179585 -0.06147,-0.130916 -3.01e-4,-0.04867 -0.0198,0.0085 -0.06147,0.130916 -0.227366,0.667395 -1.114668,3.272068 -3.14391,1.189821 -1.068429,-1.096347 -0.573723,-2.192762 1.371049,-2.523682 -1.112596,0.189351 -2.363362,-0.1235 -2.706552,-1.350093 -0.09875,-0.352838 -0.267107,-2.526004 -0.267107,-2.819621 0,-1.470358 1.288899,-1.008279 2.084335,-0.41108 z"
+                fill="#60739f"
+                id="path1"
+                style="fill:#60739f;fill-opacity:1;stroke-width:0.0165792"
+                inkscape:export-filename="bluesky-logo.svg"
+                inkscape:export-xdpi="96"
+                inkscape:export-ydpi="96" 
+                /></g>
+            </svg>
 		</a>
-		<a href="https://twitter.com/astrodotbuild" target="_blank">
-			<span class="sr-only">Follow Astro on Twitter</span>
-			<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/twitter"
-				><path
-					fill="currentColor"
-					d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-				></path></svg
-			>
-		</a>
-		<a href="https://github.com/withastro/astro" target="_blank">
+        <a href="https://mapstodon.space/@mradamcox" target="_blank">
+            <span class="sr-only">Follow on Mastodon</span>
+            <svg
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+                width="32"
+                height="32"
+                astro-icon="social/mastodon"
+                ><path
+                    fill="currentColor"
+                    d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"
+                ></path></svg
+            >
+        </a>
+		<a href="https://github.com/ohmg-dev" target="_blank">
 			<span class="sr-only">Go to Astro's GitHub repo</span>
 			<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/github"
 				><path
@@ -42,8 +75,7 @@ const today = new Date();
 <style>
 	footer {
 		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
+		color: white;
 		text-align: center;
 	}
 	.social-links {
