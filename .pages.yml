@@ -25,5 +25,5 @@ content:
         type: boolean
       - name: 'body'
         type: rich-text
-      - name: 'testcode'
+      - name: 'newcodefield'
         type: code
