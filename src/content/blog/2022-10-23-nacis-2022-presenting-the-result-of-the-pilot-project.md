@@ -2,6 +2,7 @@
 title: NACIS 2022 - Presenting the result of the pilot project
 description: Presentation at NACIS annual meeting, Oct. 2022
 pubDate: 2022-10-23
+heroImage: ../../assets/Screenshot from 2025-07-13 15-11-52.png
 category: presentations
 published: true
 ---
