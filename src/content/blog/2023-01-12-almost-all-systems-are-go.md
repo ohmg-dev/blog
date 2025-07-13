@@ -13,6 +13,8 @@ Near the end of the pilot project the platform was starting to bog down, but I s
 
 *   Big home page overhaul including a new map interface (also added to the \[Browse\]([https://oldinsurancemaps.net/browse?utm\_source=blog](https://oldinsurancemaps.net/browse?utm_source=blog)) page) to make it easier to find content, and a nice little "How it works" section.
     
+    ![](/_astro/browse-map-alone.png)
+    
     ![](/src/assets/browse-map-alone.png)
     
 *   A viewer is now automatically generated for every city, showing mosaic layers for each year (e.g. \[Plaquemine\]([https://oldinsurancemaps.net/viewer/plaquemine-la?utm\_source=blog](https://oldinsurancemaps.net/viewer/plaquemine-la?utm_source=blog)))
