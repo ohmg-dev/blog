@@ -135,8 +135,9 @@ const uniqueTags = [...new Set(tags)];
                                     <div class="level">
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />
+                                        &mdash; <span>{post.data.category}</span>
 									</p>
-                                        <span>{post.data.category}</span>
+                                        
 
                                     </div>
 								</a>
