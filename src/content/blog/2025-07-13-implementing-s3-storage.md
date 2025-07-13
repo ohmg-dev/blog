@@ -2,6 +2,7 @@
 title: Implementing S3 Storage
 description: Recently I updated the code base and transferred all content to S3
 pubDate: 2025-06-25
+heroImage: ../../assets/Screenshot from 2025-07-13 11-45-19.png
 category: tech
 published: false
 ---
