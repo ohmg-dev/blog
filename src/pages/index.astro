@@ -60,6 +60,8 @@ const uniqueTags = [...new Set(tags)];
 			}
 			ul li a {
 				display: block;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 12px;
 			}
 			.title {
 				margin: 0;
@@ -131,12 +133,14 @@ const uniqueTags = [...new Set(tags)];
 									{post.data.heroImage && (
 										<Image width={720} height={160} src={post.data.heroImage} alt="" />
 									)}
-									<h4 class="title">{post.data.title}</h4>
-                                    <div class="level">
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-                                        &mdash; <span>{post.data.category}</span>
-									</p>
+                                    <div style="padding: 10px;">
+                                        <h4 class="title">{post.data.title}</h4>
+                                        <div class="level">
+                                        <p class="date">
+                                            <FormattedDate date={post.data.pubDate} />
+                                            &mdash; <span>{post.data.category}</span>
+                                        </p>
+                                        </div>
                                     </div>
 								</a>
 							</li>
