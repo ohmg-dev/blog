@@ -3,6 +3,7 @@ title: "Blog post w/ Dev Seed: Open Source Spotlight - Old Insurance Maps"
 description: Guest blog post on the Dev Seed tech blog
 pubDate: 2023-12-10
 heroImage: ../../assets/Screenshot from 2025-07-13 15-31-19.png
+heroLink: https://developmentseed.org/blog/2023-12-01-spotlight-oldinsurancemaps/
 category: writing
 published: true
 ---
