@@ -1,5 +1,6 @@
 ---
 title: Implementing S3 Storage
+description: Recently I updated the code base and transferred all content to S3
 pubDate: 2025-06-25
 category: tech
 published: false
