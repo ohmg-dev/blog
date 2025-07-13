@@ -1,4 +1,6 @@
-media: src/assets
+media: 
+  input: src/assets
+  output: /_astro
 content:
   - name: posts
     label: Posts
