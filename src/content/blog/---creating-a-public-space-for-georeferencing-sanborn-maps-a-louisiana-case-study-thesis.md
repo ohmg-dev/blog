@@ -1,6 +1,6 @@
 ---
-title: "Creating a Public Space for Georeferencing Sanborn Maps: A Louisiana
-  Case Study (thesis)"
+title: '"Creating a Public Space for Georeferencing Sanborn Maps: A Louisiana
+  Case Study" (thesis)'
 description: Completed and upload MS thesis paper
 pubDate: 2022-08-13
 heroImage: ../../assets/Screenshot from 2025-07-13 15-00-50.png
