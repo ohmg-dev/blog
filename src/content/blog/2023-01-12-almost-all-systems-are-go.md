@@ -5,5 +5,5 @@ description: Near the end of the pilot project the platform was starting to bog
 heroImage: /_astro/browse-map-alone.png
 category: news
 published: true
-content: asdf
 ---
+new body content
