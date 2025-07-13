@@ -6,6 +6,7 @@ content:
     label: Posts
     path: src/content/blog
     type: collection
+    filename: '{year}-{month}-{day}-{fields.title}.md'
     fields:
       - name: 'title'
         type: string
