@@ -1,5 +1,6 @@
 ---
 title: "HistoryForge: A WMS Integration Success Story"
+description: To integrate with HistoryForge, I implemented WMS endpoints for all maps.
 pubDate: 2023-10-26
 category: tech
 published: true
