@@ -1,0 +1,25 @@
+media:
+  input: src/assets
+  output: /_astro
+content:
+  - name: posts
+    label: Posts
+    path: src/_posts
+    type: collection
+    fields:
+      - name: 'title'
+        type: string
+      - name: 'description'
+        type: string
+      - name: 'pubDate'
+        type: date
+      - name: 'heroImage'
+        type: image
+      - name: 'heroLink'
+        type: string
+      - name: 'heroLinkText'
+        type: string
+      - name: 'category'
+        type: string
+      - name: 'published'
+        type: boolean
