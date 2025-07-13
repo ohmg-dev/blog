@@ -4,7 +4,7 @@ description: Recently I updated the code base and transferred all content to S3
 pubDate: 2025-06-29
 heroImage: ../../assets/mackerel-sky.png
 category: tech
-published: false
+published: true
 ---
 ## What is S3 Object Storage?
 
