@@ -1,5 +1,5 @@
 ---
-title: Extending Geonode to Support Historical Map Georeferencing
+title: '"Extending Geonode to Support Historical Map Georeferencing"'
 description: Presentation at GeoNode Virtual Summit (Dec. 2020)
 pubDate: 2020-12-13
 heroImage: ../../assets/Screenshot from 2025-07-13 14-28-34.png
