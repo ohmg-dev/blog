@@ -23,5 +23,5 @@ content:
         type: string
       - name: 'published'
         type: boolean
-      - name: 'content'
+      - name: 'body'
         type: rich-text
