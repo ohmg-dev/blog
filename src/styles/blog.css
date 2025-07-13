@@ -1,3 +1,7 @@
 .tag-filter:hover {
     text-decoration: underline
 }
+
+.content blockquote {
+    background-color:lightgrey;
+}

@@ -20,7 +20,8 @@
   --bulma-body-color: #333333;
   --bulma-subtitle-color: #333333;
   --bulma-strong-color: #333333;
-  --bulma-link-text: var(--accent)
+  --bulma-link-text: var(--accent);
+  --bulma-content-blockquote-background-color: lightgray;
 }
 
 .navbar-dropdown a.navbar-item {
