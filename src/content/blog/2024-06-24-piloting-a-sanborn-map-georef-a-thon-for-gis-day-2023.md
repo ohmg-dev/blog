@@ -9,7 +9,7 @@ heroLink: https://waml.org/waml-information-bulletin/volume-55-number-2/piloting
 category: writing
 published: true
 ---
-Last November, Josh Sadvari and Michelle Hooper hosted a Georef-a-thon OSU Libraries using [OldInsuranceMaps.net](http://OldInsuranceMaps.net), and wrote this detailed piece about how they prepared for the event, how the platform worked for them, and what kind of engagement their participants got from the experience.
+Last November, Josh Sadvari and Michelle Hooper hosted a Georef-a-thon at The Ohio State University Libraries using [OldInsuranceMaps.net](http://OldInsuranceMaps.net), and wrote this detailed piece about how they prepared for the event, how the platform worked for them, and what kind of engagement their participants got from the experience.
 
 [Piloting a Sanborn Map Georef-a-thon for GIS Day 2023](https://waml.org/waml-information-bulletin/volume-55-number-2/piloting-a-sanborn-map-georef-a-thon/), WAML Information Bulletin, Western Association of Map Libraries. 2024. Josh Sadvari and Michelle Hooper
 
