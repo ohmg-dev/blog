@@ -13,7 +13,7 @@ Last November, Josh Sadvari and Michelle Hooper hosted a Georef-a-thon at The Oh
 
 [Piloting a Sanborn Map Georef-a-thon for GIS Day 2023](https://waml.org/waml-information-bulletin/volume-55-number-2/piloting-a-sanborn-map-georef-a-thon/), WAML Information Bulletin, Western Association of Map Libraries. 2024. Josh Sadvari and Michelle Hooper
 
-Some nice quotes from the article, that illustrate how the event was able to expand knowledge and engagement with these historical maps:
+Some nice quotes from the article, that illustrate how the event was able to expand knowledge and appreciation of historical maps:
 
 > Very few georef-a-thon participants indicated they had previously used or even heard of Sanborn maps when asked this question during the introduction, which reinforces how such an activity can help in creating awareness of the potential uses of this collection.
 
