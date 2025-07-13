@@ -4,6 +4,7 @@ title: '"Creating a Public Space for Georeferencing Sanborn Maps: A Louisiana
 description: Completed and upload MS thesis paper
 pubDate: 2022-08-13
 heroImage: ../../assets/Screenshot from 2025-07-13 15-00-50.png
+heroLink: https://repository.lsu.edu/gradschool_theses/5641/
 category: writing
 published: true
 ---
