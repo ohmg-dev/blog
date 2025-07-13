@@ -1,6 +1,5 @@
 ---
-title: "State of the Map US: Mapping the turn of the Century with OHM and
-  OldInsuranceMaps.net w/ Jeff Meyer"
+title: Mapping the turn of the Century with OHM and OldInsuranceMaps.net w/ Jeff Meyer
 description: Presentation to SOTMUS 2023 with Jeff Meyer of OpenHistoricalMap
 pubDate: 2023-07-11
 heroImage: ../../assets/Screenshot from 2025-07-13 15-40-05.png
