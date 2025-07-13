@@ -3,7 +3,7 @@ title: "HistoryForge: A WMS Integration Success Story"
 description: To integrate with HistoryForge, I implemented WMS endpoints for all maps.
 pubDate: 2023-10-26
 heroImage: ../../assets/Screenshot from 2025-07-13 17-11-50.png
-category: tech
+category: tech,collabs
 published: true
 ---
 Working with the [HistoryForge](https://historyforge.net) team we have gotten the mosaicked New Orleans 1895, vol. 1 edition into their web map interface! You can find it in the map overlays at [https://sela.historyforge.net/forge](https://sela.historyforge.net/forge). (Also admire the Robinson Atlas and other layers Elizabeth has added while you are there!) Some may recall this edition was the focus of our first georeference-a-thon this past summer. Happy to see it in use outside of [OldInsuranceMaps.net](http://OldInsuranceMaps.net)! The best thing about this integration is that it spurred some development on the HF platform, so now _any_ maps/mosaics from [OldInsuranceMaps.net](http://OldInsuranceMaps.net) can be pulled directly in. No need to move files, etc. I have a feeling there will be more HF collaboration in the future!

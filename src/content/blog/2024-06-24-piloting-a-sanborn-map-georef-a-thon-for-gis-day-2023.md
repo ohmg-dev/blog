@@ -6,7 +6,7 @@ description: An article by Josh Sadvari and Michelle Hooper, published in the
 pubDate: 2024-06-24
 heroImage: ../../assets/Screenshot from 2025-07-13 17-22-28.png
 heroLink: https://waml.org/waml-information-bulletin/volume-55-number-2/piloting-a-sanborn-map-georef-a-thon/
-category: writing
+category: writing,collabs
 published: true
 ---
 Last November, Josh Sadvari and Michelle Hooper hosted a Georef-a-thon at The Ohio State University Libraries using [OldInsuranceMaps.net](http://OldInsuranceMaps.net), and wrote this detailed piece about how they prepared for the event, how the platform worked for them, and what kind of engagement their participants got from the experience.

@@ -16,7 +16,7 @@ const published_posts = posts.filter((post) => post.data.published)
 
 const {tag} = Astro.props
 
-const tags = published_posts.map((p) => p.data.category).flat(); //Gets all tags from collection
+const tags = published_posts.map((p) => p.data.category.split(",")).flat(); //Gets all tags from collection
 const uniqueTags = [...new Set(tags)];
 ---
 
@@ -128,7 +128,7 @@ const uniqueTags = [...new Set(tags)];
 				<ul>
 					{
 						published_posts.map((post) => (
-							<li class={`post-card ${post.data.category}`}>
+							<li class={`post-card ${post.data.category.replace(",", " ")}`}>
 								<a href={`/post/${post.id}/`}>
 									{post.data.heroImage && (
 										<Image width={720} height={160} src={post.data.heroImage} alt="" />
@@ -138,7 +138,7 @@ const uniqueTags = [...new Set(tags)];
                                         <div class="level">
                                         <p class="date">
                                             <FormattedDate date={post.data.pubDate} />
-                                            &mdash; <span>{post.data.category}</span>
+                                            &mdash; <span>{post.data.category.replace(",", ", ")}</span>
                                         </p>
                                         </div>
                                     </div>
@@ -179,8 +179,10 @@ const uniqueTags = [...new Set(tags)];
     evt.currentTarget.classList.remove("is-light")
     evt.currentTarget.classList.add("is-dark")
     let selectedTag = evt.currentTarget.getAttribute("data-type");
+    console.log(selectedTag)
     let tagElement = document.getElementById("tags");
     let tags = tagElement.dataset.tags;
+    console.log(tags)
     tags = tags.split(",");
     tags.splice(tags.indexOf(selectedTag), 1);
 
