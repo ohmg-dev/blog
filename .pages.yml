@@ -25,3 +25,5 @@ content:
         type: boolean
       - name: 'body'
         type: rich-text
+      - name: 'testcode'
+        type: code
