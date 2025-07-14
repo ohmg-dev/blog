@@ -34,7 +34,7 @@ There were also a couple of important constraints to work around:
 
 ### Code compatibility
 
-OIM is build with the Django web framework, and there is a solid, standardized way for implementing S3 storage using [django-storages.](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html) In theory then, the storages plugin could be installed, a switch could be flipped, and violá, Django will read and write to an S3 bucket instead of the local file system.
+OIM is built with the Django web framework, and there is a solid, standardized way for implementing S3 storage using [django-storages.](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html) In theory then, the storages plugin could be installed, a switch could be flipped, and violá, Django will read and write to an S3 bucket instead of the local file system.
 
 However, it wasn't that simple. Due to the fact that a lot of splitting, georeferencing, and mosaicking operations had been built with the expectation of local file storage, some of them failed once S3 got involved. Luckily, GDAL (on which OIM has relied from the start) has a [fantastic virtual file system](https://gdal.org/en/stable/user/virtual_file_systems.html) that allows it to read directly from S3 urls, and combining that with another GDAL feature, [virtual rasters or VRTs](https://gdal.org/en/stable/drivers/raster/vrt.html), offered plenty of flexibility to work with. Ultimately, the implementation required rewriting and improving some basic functions at the core of the app, but produced a better code base in the end. If you are interested, you can read all the gory details in [this pull request](https://github.com/ohmg-dev/OldInsuranceMaps/pull/280).
 
@@ -46,10 +46,10 @@ In the week before the final deployment, I configured [aws cli](https://aws.amaz
 
 ## The result
 
-It went well! Since the switch all new files have gone straight to S3, and all of the existing interfaces and viewers on the site now run from COGs in S3 instead of through `nginx` on the server.
+It went well! Since the switch on a Sunday afternoon, all new files have gone straight to S3, and all of the existing interfaces and viewers on the site now run from COGs in S3 instead of through `nginx` on the server.
 
 One hiccup I encountered was that the setting `AWS_QUERYSTRING_AUTH` in Django was automatically set to `True` , causing the URLs that the backend returned to have embedded expiration dates in them. Everything would be fine when I re-generated the lookups (which include saved URLs for things like thumbnails) but then the next day these same URLs would be "unauthorized" and no longer work. Setting `AWS_QUERYSTRING_AUTH=False` fixed this issue.
 
-Wasabi is _very_ cheap, just $7/month per terabyte, meaning that the 440gb I have in the bucket (doubled if you include the backup bucket) falls within the lowest tier of usage. A very quick back-of-the-envelope calculation shows that if the _entire_ LOC Sanborn Map collection were georeferenced on OIM, storage would be under 7tb ($49/month) or double that with a backup. That seems like a pretty good deal.
+Wasabi is _very_ cheap, just $7/month per terabyte, meaning that the 440gb I have in the bucket (doubled if you include the backup bucket) falls within the lowest tier of usage. A very quick back-of-the-envelope calculation shows that if the _entire_ LOC Sanborn Map collection (500,000 sheets resulting in at least 3x that many files) were georeferenced on OIM, storage would be under 7tb ($49/month) or double that with a backup. That seems like a pretty good deal.
 
-I've talked about making this upgrade for a while, so it feels good to finally do it. Technically, I could delete all old content from the server and then downgrade it to reduce the monthly bill, but storage was just one of the elements in play, because the splitting and warping processes benefit from a powerful server, not to mention I still run TiTiler directly on the server as well. All in good time...
+I've talked about making this upgrade for a while, so it feels good to finally do it. Technically, I could delete all old content from the server and then downgrade it to reduce the monthly bill, but storage was just one of the elements in play, because the splitting and warping processes do benefit from a powerful server, not to mention I still run TiTiler directly on the server as well. All in good time...
