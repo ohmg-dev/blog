@@ -13,7 +13,7 @@ The basic georeferencing process, which turns a non-spatial image into a geospat
 
 ![](../../assets/Screenshot%20from%202025-08-09%2008-37-19.png)
 
-Importantly, a VRT is just a small XML file, so creating one is nearly instantaneous and requires virtually no storage space. They are also disposable, as the actual database stores all of the information that gets embedded into them. They can be recreated on demand and then deleted after they are no longer needed.
+Importantly, a VRT is just a small XML file, so creating one is nearly instantaneous and requires virtually no storage space. In OldInsuranceMaps, they are also disposable, as the actual database stores all of the information that gets embedded into them. They can be recreated on demand and then deleted after they are no longer needed.
 
 With this in mind, the live preview that is presented in the georeferencing interface is created by injecting user-generated information directly into the VRT linkage chain, and updating that information on GCP creation or modification using a feedback loop. Creating this preview is actually very simple, because TiTiler, and MapServer which I used in the original implementation of this feature, can read and tile data directly from a VRT--no need to actually generate a GeoTIFF.
 
