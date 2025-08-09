@@ -19,7 +19,7 @@ With this in mind, the live preview that is presented in the georeferencing inte
 
 ![](../../assets/Screenshot%20from%202025-08-09%2008-37-14.png)
 
-Finally, to create the mosaics that are the ultimate end goal of the entire system, even more VRTs are added. First, on top of the warped VRT a new one is created that incorporates the layer's mask, previously drawn by users through a unified, "multimask" interface. Then, all of the cropped VRTs are wrapped up into a single mosaicked VRT (mosiacking is actually what VRTs are most commonly used for), and that final VRT is then translated into a single (sometimes quite large) COG.
+Finally, to create the mosaics that are the ultimate end goal of the entire system, even more VRTs are added. First, on top of the warped VRT a new one is created that incorporates the layer's mask, drawn by users through a unified, "multimask" interface. Then, all of the cropped VRTs are wrapped up into a single mosaicked VRT (mosiacking is actually what VRTs are most commonly used for), and that final VRT is then translated into a single (sometimes quite large) COG.
 
 ![](../../assets/Screenshot%20from%202025-08-09%2008-11-35.png)
 
