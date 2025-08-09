@@ -5,7 +5,7 @@ description: In a recent presentation I described in more detail how the warping
 pubDate: 2025-08-09
 heroImage: ../../assets/Screenshot from 2025-07-24 11-11-20.png
 category: presentations
-published: false
+published: true
 ---
 Recently I gave a talk about [OldInsuranceMaps.net](http://OldInsuranceMaps.net) for [I-GUIDE's Virtual Consulting Office](https://i-guide.io/i-guide-vco/) speaker series and [](https://i-guide.io/i-guide-vco/a-look-inside-oldinsurancemaps/)I was able to talk a bit more about the technical details of the platform than I have in the past, which was really fun and a great excuse to make some more diagrams. One element of the system I described is the way that the georeferencing process relies on GDAL's "virtual raster" file format, and how this is used for the live preview feature of the georeferencing interface. Here's a short summary of that part of the talk with a few relevant slides. For more, you can [view the full recording](https://i-guide.io/i-guide-vco/a-look-inside-oldinsurancemaps/), or find the slides [here](https://docs.google.com/presentation/d/1zv23HALxZ_3VP8ox3Mr089qDxOn4mNrO2zOKWKsseiA/edit?usp=sharing) (note, I've updated these some of them a bit since the recording).
 
